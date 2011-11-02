@@ -1128,10 +1128,10 @@
 				re = /^[0-9\.]+(|px)$/i;
 
 				if (re.test('' + w))
-					w = Math.max(parseInt(w) + (o.deltaWidth || 0), 100);
+					w = Math.max(parseInt(w) + (o.deltaWidth || 0), 20);  //decipher edit: decrease minimum width
 
 				if (re.test('' + h))
-					h = Math.max(parseInt(h) + (o.deltaHeight || 0), 100);
+					h = Math.max(parseInt(h) + (o.deltaHeight || 0), 20);  //decipher edit: decrease minimum width
 
 				// Render UI
 				o = t.theme.renderUI({
