@@ -689,7 +689,7 @@
 			if (lo == 'external') {
 				n = c = DOM.create('div', {style : 'position:relative'});
 				n = DOM.add(n, 'div', {id : ed.id + '_external', 'class' : 'mceExternalToolbar'});
-				DOM.add(n, 'a', {id : ed.id + '_external_close', href : 'javascript:;', 'class' : 'mceExternalClose'});
+				//DOM.add(n, 'a', {id : ed.id + '_external_close', href : 'javascript:;', 'class' : 'mceExternalClose'}); //decipher: do not add class
 				n = DOM.add(n, 'table', {id : ed.id + '_tblext', cellSpacing : 0, cellPadding : 0});
 				etb = DOM.add(n, 'tbody');
 
@@ -712,7 +712,7 @@
 					});
 
 					DOM.show(e);
-					DOM.setStyle(e, 'top', 0 - DOM.getRect(ed.id + '_tblext').h - 1);
+					//DOM.setStyle(e, 'top', 0 - DOM.getRect(ed.id + '_tblext').h - 1); //decipher: do not set style
 
 					// Fixes IE rendering bug
 					DOM.hide(e);
