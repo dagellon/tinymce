@@ -41,8 +41,9 @@
 				myHeight = tinymce.isIE ? body.scrollHeight : (tinymce.isWebKit && body.clientHeight == 0 ? 0 : body.offsetHeight);
 
 				// Don't make it smaller than the minimum height
-				if (myHeight > t.autoresize_min_height)
-					resizeHeight = myHeight;
+                // decipher edit - allow min height
+				//if (myHeight > t.autoresize_min_height)
+				//	resizeHeight = myHeight;
 
 				// If a maximum height has been defined don't exceed this height
 				if (t.autoresize_max_height && myHeight > t.autoresize_max_height) {
